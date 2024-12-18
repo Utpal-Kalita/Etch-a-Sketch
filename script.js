@@ -1,11 +1,10 @@
-
 let color = "black";
 let click = false;
 document.addEventListener("DOMContentLoaded", function() {
     createBoard(16)
 
    document.querySelector("body").addEventListener("click", function(e){
-    if(e.target.tagname !="BUTTON"){
+    if(e.target.tagName !="BUTTON"){
         click = !click;
         let draw = document.querySelector("#draw");
         if (click){
@@ -61,6 +60,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (color == "random"){
                 this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
             }
+            else if (color == "white"){
+                this.style.backgroundColor = `white`
+            }
             else{
                 this.style.backgroundColor = `black`
             }
@@ -77,6 +79,5 @@ document.addEventListener("DOMContentLoaded", function() {
          let divs = document.querySelectorAll("div")
          divs.forEach((div) => div.style.backgroundColor = "white")
     }
-
 
 
